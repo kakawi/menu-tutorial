@@ -1,0 +1,15 @@
+.wrapper {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.menu_top ul {
+    list-style: none;
+}
+
+.menu_top li {
+    display: inline-block;
+    /*display: inline;*/
+    /*padding: 5px;*/
+    /*border: 1px black solid;*/
+}
