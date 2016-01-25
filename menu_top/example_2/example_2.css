@@ -1,3 +1,4 @@
+
 .wrapper {
     margin: 0 auto;
     width: 600px;
@@ -10,8 +11,13 @@
 }
 
 .menu_top li {
-    display: inline-block;
-    /*display: inline;*/
+    float: left;
     padding: 5px;
     border: 1px black solid;
+}
+
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
 }
