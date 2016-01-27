@@ -1,0 +1,73 @@
+.wrapper {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.menu_top ul{ /* сбрасываем поля и отступы у списков */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    white-space: nowrap; /* Для того чтобы элементы были написаны в 1 строку */
+}
+
+.menu_top > ul > li { /* 1 level */
+    background: #fffa6e;
+}
+.menu_top > ul ul > li { /* 2 level */
+    background: #f2ffe8;
+}
+.menu_top > ul ul ul > li { /* 3 level */
+    background: #0299d3;
+}
+.menu_top > ul ul ul ul > li { /* 4 level */
+    background: #54d36b;
+}
+.menu_top > ul ul ul ul ul > li { /* 5 level */
+    background: #d38674;
+}
+
+/*///////////////////////////////////////*/
+/* Все li элементы делаем float:left */
+.menu_top > ul li {
+    float: left;
+}
+
+.menu_top > ul > li { /* 1 уровень */
+    border: 1px solid #222;
+}
+
+.menu_top > ul li ul { /* Прячем все меню ниже 1 уровня */
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+.menu_top > ul li:hover > ul { /* Показываем все меню при наведении на родительский li, которые находятся ниже 1 уровня*/
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+.menu_top ul {
+    width: 100%;
+}
+
+.menu_top ul { /* Чтобы вести отсчет с левого края меню */
+    position: relative;
+}
+
+.menu_top > ul ul ul { /* Начиная со 2-го уровня размещать списки друг под другом */
+    top: 100%;
+    left: 0;
+}
+/*///////////////////////////////////////*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
