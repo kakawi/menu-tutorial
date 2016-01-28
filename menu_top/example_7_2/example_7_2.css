@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* line 9, example_7_2.scss */
+.wrapper {
+  margin: 0 auto;
+  width: 940px;
+}
+
+/* line 14, example_7_2.scss */
+.menu_top ul {
+  /* сбрасываем поля и отступы у списков */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 20, example_7_2.scss */
+.menu_top > ul > li {
+  /* 1 level */
+  background: #fffa6e;
+}
+
+/* line 23, example_7_2.scss */
+.menu_top > ul div {
+  /* 2 level */
+  background: #0299d3;
+}
+
+/* line 28, example_7_2.scss */
+.menu_top > ul div p:nth-child(odd) {
+  background: #f2ffe8;
+}
+
+/* line 32, example_7_2.scss */
+.menu_top > ul div p:nth-child(even) {
+  background: #d38674;
+}
+
+/*///////////////////////////////////////*/
+/* line 37, example_7_2.scss */
+.menu_top > ul {
+  width: 100%;
+  /* чтобы растянуть на всю ширину контейнета (без этого justify-content - не работает) */
+  display: inline-flex;
+  /* в строку */
+  justify-content: space-between;
+  /* равномерно по всех ширине */
+  position: relative;
+  /* чтобы начинать отсчет от 1-го уровня*/
+}
+/* line 44, example_7_2.scss */
+.menu_top > ul > li {
+  flex-grow: 1;
+  /* если не указывать, то за элементы flex будет брать ссылки (<a>) */
+}
+/* line 47, example_7_2.scss */
+.menu_top > ul > li div {
+  /* прячем div */
+  position: absolute;
+  display: none;
+}
+/* line 52, example_7_2.scss */
+.menu_top > ul > li:hover div {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /* div - это наш контейнер на все ширину ul, который занимает все ширину wrapper */
+  display: block;
+  left: 0;
+  /* Чтобы начинать отсчет сначала (например ul, все зависит от того где будет position:relative)*/
+}
+/* line 12, ../../../../lib/gems/1.9.1/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+.menu_top > ul > li:hover div:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 57, example_7_2.scss */
+.menu_top > ul > li:hover div p {
+  width: 16.66667%;
+  float: left;
+  margin-right: 4.16667%;
+  /* делим на 5 равных частей */
+}
+/* line 59, example_7_2.scss */
+.menu_top > ul > li:hover div p:nth-child(5n) {
+  width: 16.66667%;
+  float: right;
+  margin-right: 0;
+  /* указывает последний элемент (у него отсутсвует margin-right) */
+}
+
+/*///////////////////////////////////////*/
+/* line 69, example_7_2.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 75, example_7_2.scss */
+.clearfix:after {
+  clear: both;
+}

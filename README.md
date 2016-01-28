@@ -4,7 +4,7 @@
 # MENU TOP (Верхнее меню)
 ## Одноуровневое
 ### [Example_1](https://jsfiddle.net/kakawi/tqyo82fm/)
-Меню сделано на *inline-block*
+Меню сделано на **inline-block**
 
 Итог
 * (+) Самый простой способ
@@ -12,17 +12,18 @@
 
 
 ### [Example_2](https://jsfiddle.net/kakawi/7v4gbfsd/)
-Меню сделано на *float:left*
+Меню сделано на **float:left**
 
 Итог
 * (+) Нету пробелов 
 * (-) Необходимо добавлять clearfix
 
+## Двухуровневое
 ### [Example_3](https://github.com/kakawi/menu-tutorial/tree/master/menu_top/example_3)
 ####[Example_3_1](https://jsfiddle.net/kakawi/Ltydyce6/)
 ####[Example_3_2](https://jsfiddle.net/kakawi/1syha9a4/)
 ####[Example_3_3](https://jsfiddle.net/kakawi/putzkkrs/)
-Меню сделано на *float:left + display:none*
+Меню сделано на **float:left + display:none**
 
 Итог: рекомендую использовать **display:none**, а для выравнивания подменю
 * left: 50%
@@ -31,6 +32,7 @@
 * transfrom: translateX(-50%)
 * min-width: ....
 
+## Многоуровневое
 ### [Example_4](https://jsfiddle.net/kakawi/Lb4x5r5z/)
 Меню вложенностью >= 3
 
@@ -48,3 +50,10 @@
 Выводы:
 * flex позволяет избавиться от clearfix
 * но привносит свои особенности с тем от чего считаются left & top и с шириной меню
+
+## Mega Drop Down Menu
+### [Example_7](https://jsfiddle.net/kakawi/37avojjy/)
+На **flexbox'е**. А почему бы и нет?
+
+### [Example_7_2](http://codepen.io/kakawi/pen/EPLOZK)
+Я не удержался. SASS + Susy
