@@ -1,0 +1,45 @@
+.wrapper {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.menu_top > ul > li { /* 1 level */
+    background: #fffa6e;
+}
+
+.menu_top > ul > li > ul { /* 2 level */
+    background: #f2ffe8;
+}
+
+/*//////////////////////////////////////////////////*/
+.menu_top ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu_top > ul > li { /* 1-ый уровень */
+    float: left;
+    padding: 5px;
+    border: 1px black solid;
+}
+
+.menu_top > ul > li > ul { /* 2-ой уровень */
+    display: none;
+    position: absolute; /* Если не будет absolute, то все элементы будут строиться внутри существующего */
+}
+
+.menu_top > ul > li:hover > ul {
+    /*display: block;*/ /* CHANGED */
+}
+/*//////////////////////////////////////////////////*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}

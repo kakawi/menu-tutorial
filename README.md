@@ -1,59 +1,77 @@
 # menu-tutorial
 Тут буду выкладывать код всех менюшек, что сделаю :)
 
-# MENU TOP (Верхнее меню)
-## Одноуровневое
-### [Example_1](https://jsfiddle.net/kakawi/tqyo82fm/)
+# [MENU TOP (Верхнее меню)](https://github.com/kakawi/menu-tutorial/tree/master/menu_top/)
+## [Одноуровневое](https://github.com/kakawi/menu-tutorial/tree/master/menu_top/one_level/)
+### [Example_1](http://codepen.io/kakawi/pen/adgmzp)
 Меню сделано на **inline-block**
 
 Итог
-* (+) Самый простой способ
+* (+) Простота
 * (-) Пробелы между элементами
 
 
-### [Example_2](https://jsfiddle.net/kakawi/7v4gbfsd/)
+### [Example_2](http://codepen.io/kakawi/pen/mVZrxv)
 Меню сделано на **float:left**
 
 Итог
 * (+) Нету пробелов 
 * (-) Необходимо добавлять clearfix
 
-## Двухуровневое
-### [Example_3](https://github.com/kakawi/menu-tutorial/tree/master/menu_top/example_3)
-####[Example_3_1](https://jsfiddle.net/kakawi/Ltydyce6/)
-####[Example_3_2](https://jsfiddle.net/kakawi/1syha9a4/)
-####[Example_3_3](https://jsfiddle.net/kakawi/putzkkrs/)
-Меню сделано на **float:left + display:none**
+### [Example_3](http://codepen.io/kakawi/pen/wMLzjw)
+Меню сделано на **flexbox**
 
-Итог: рекомендую использовать **display:none**, а для выравнивания подменю
-* left: 50%
-* position: relative
-* z-index:1
-* transfrom: translateX(-50%)
-* min-width: ....
+Итог
+* (+) Простота
+* (+) Обширные настройки
+* (-) Вопрос в поддержке (практически неактуален)
 
-## Многоуровневое
-### [Example_4](https://jsfiddle.net/kakawi/Lb4x5r5z/)
+## [Двухуровневое](https://github.com/kakawi/menu-tutorial/tree/master/menu_top/two_levels/)
+### [Example_1](http://codepen.io/kakawi/pen/LGKRmm)
+left: -9999px;
+
+### [Example_2](http://codepen.io/kakawi/pen/BjgLxX)
+display:none
+
+### [Example_3](http://codepen.io/kakawi/pen/KVjgez)
+Отцентрированное меню по центру
+
+### [Example_4](http://codepen.io/kakawi/pen/EPBgRw)
+Меню сделано на **visibility:hidden + opacity:0**
+
+## [Многоуровневое](https://github.com/kakawi/menu-tutorial/tree/master/menu_top/multimenu/)
+### [Example_1](http://codepen.io/kakawi/pen/gPNwKy)
 Меню вложенностью >= 3
 
-### [Example_5](https://jsfiddle.net/kakawi/je0fab8u/)
-Воспользуеся **flexbox** для 1-го уровня
+### [Example_2](http://codepen.io/kakawi/pen/NxZRBP)
+Все подменю тоже горизонтальные (**float:left**)
 
-### [Example_5_2](https://jsfiddle.net/kakawi/f3tbc9o9/)
-А сделаемка все уровни меню горизонтальными
-
-### [Example_6](https://jsfiddle.net/kakawi/at593z0b/)
-А повторим тоже самое и на **float:left**
-
-Основная особенность замеченная мною: Если использовать **flex**, то меню по горизонтали спокойно выходит *за границы*, а если использовать **float:left**, то ширина для подменю ограничена *размером контейнера*.
+### [Example_3](http://codepen.io/kakawi/pen/yedaqa)
+Все подменю горизонтальные (**FlexBox**)
 
 Выводы:
 * flex позволяет избавиться от clearfix
 * но привносит свои особенности с тем от чего считаются left & top и с шириной меню
 
-## Mega Drop Down Menu
-### [Example_7](https://jsfiddle.net/kakawi/37avojjy/)
+## [Mega Drop Down Menu](https://github.com/kakawi/menu-tutorial/tree/master/menu_top/mega_menu/)
+### [Example_1](http://codepen.io/kakawi/pen/YwoGjR)
 На **flexbox'е**. А почему бы и нет?
+Вместо подменю (**ul**) у нас теперь **div** с собственной разметкой
 
-### [Example_7_2](http://codepen.io/kakawi/pen/EPLOZK)
-Я не удержался. SASS + Susy
+### [Example_2](http://codepen.io/kakawi/pen/RrzGBv)
+Я не удержался. SCSS + Susy
+
+## [CSS + JS](https://github.com/kakawi/menu-tutorial/tree/master/menu_top/css_js/)
+Для работы со сложной анимацией без JS необойтись
+### [Example_1](http://codepen.io/kakawi/pen/dGBNLz)
+Самый простой вариант
+
+### [Example_2](http://codepen.io/kakawi/pen/OMeWGo)
+Добиваемся идеала с помощью таймера
+
+# [Sidebar (Боковое вертикальное меню)](https://github.com/kakawi/menu-tutorial/tree/master/sidebar/)
+Оказывается чтобы сделать вертикальное меню достаточно не делать 1-ый уровень горизонтальным :)
+## [Example_1](http://codepen.io/kakawi/pen/qbzRGr)
+Например так.
+
+

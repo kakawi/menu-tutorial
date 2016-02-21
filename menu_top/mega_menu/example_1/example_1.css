@@ -1,0 +1,62 @@
+.wrapper {
+    margin: 0 auto;
+    width: 940px;
+}
+
+.menu_top ul{ /* сбрасываем поля и отступы у списков */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu_top > ul > li { /* 1 level */
+    background: #fffa6e;
+}
+.menu_top > ul div { /* выпадающее меню */
+    background: #0299d3;
+}
+
+.menu_top > ul div p:nth-child(odd) {
+    background: #f2ffe8;
+    border: 1px black solid;
+}
+
+.menu_top > ul div p:nth-child(even) {
+    background: #d38674;
+}
+
+/*///////////////////////////////////////*/
+.menu_top ul {
+    width: 100%; /* чтобы растянуть на всю ширину контейнета (без этого justify-content - не работает) */
+
+    display: inline-flex; /* в строку */
+    position: relative; /* чтобы начинать отсчет от 1-го уровня*/
+}
+
+.menu_top > ul > li {
+    flex-grow: 1; /* если не указывать, то за элементы flex будет браться ссылки (<a>), то что первое содержит content */
+}
+
+.menu_top > ul div { /* прячем div */
+    position: absolute;
+    display: none;
+}
+
+.menu_top > ul li:hover > div {
+    display: flex;
+    /*flex-flow: row wrap; /!* много строчный flex *!/*/
+    left: 0; /* Чтобы начинать отсчет сначала (например ul, все зависит от того где будет position:relative)*/
+}
+
+/*///////////////////////////////////////*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
