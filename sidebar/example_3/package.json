@@ -1,0 +1,11 @@
+{
+  "name": "menu-tutorial-example-7",
+  "version": "0.1.0",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-for-compass": "0.0.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-simple-compass": "^0.1.1"
+  }
+}

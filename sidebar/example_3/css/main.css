@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* line 5, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, ../scss/main.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 7, ../scss/main.scss */
+.wrapper {
+  margin: 0 auto;
+  width: 968px;
+  position: relative;
+  /* для ширины */
+}
+
+/* line 14, ../scss/main.scss */
+header {
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #57a539;
+  padding: 10px;
+  height: 50px;
+}
+
+/* line 25, ../scss/main.scss */
+body {
+  padding-top: 50px;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 1001px) {
+  /* line 30, ../scss/main.scss */
+  .content {
+    width: 70%;
+    margin-left: 30%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 30, ../scss/main.scss */
+  .content {
+    margin-left: 15%;
+  }
+}
+
+/* line 41, ../scss/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 47, ../scss/main.scss */
+.clearfix:after {
+  clear: both;
+}
