@@ -1,20 +1,25 @@
 var gulp = require('gulp');
 var compass = require('gulp-for-compass');
 var livereload = require('gulp-livereload');
+var concatCss = require('gulp-concat-css');
+
+var scssDir = './scss/';
+var cssDir = './css/';
 
 gulp.task('default', ['compass'], function () {
     livereload.listen();
-    gulp.watch('./*.scss', ['compass']);
+    gulp.watch(scssDir + '*.scss', ['compass']);
 });
 
 gulp.task('compass', function () {
-    return gulp.src('./*.scss')
+    return gulp.src(scssDir + './*.scss')
         .pipe(compass({
-            sassDir: './',
-            cssDir: './',
+            sassDir: scssDir,
+            cssDir: cssDir,
             require: ['susy'],
             force: true
         }))
-        .pipe(gulp.dest('./'))
+        .pipe(concatCss("example_2.css"))
+        .pipe(gulp.dest(cssDir))
         .pipe(livereload());
 });

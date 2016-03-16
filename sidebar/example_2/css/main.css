@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* line 2, ../scss/main.scss */
+.wrapper {
+  margin: 0 auto;
+  width: 600px;
+  position: relative;
+  /* для ширины */
+}
+
+@media only screen and (min-width: 801px) {
+  /* line 10, ../scss/main.scss */
+  .content {
+    width: 70%;
+    margin-left: 30%;
+  }
+}
+/* line 18, ../scss/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 24, ../scss/main.scss */
+.clearfix:after {
+  clear: both;
+}

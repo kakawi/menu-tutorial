@@ -1,9 +1,11 @@
-.sidebar {
+@import "variables";
+
+.left-sidebar {
   width: 30%;
   position: absolute;
 }
 
-.sidebar ul{ /* сбрасываем поля и отступы у списков */
+.left-sidebar ul{ /* сбрасываем поля и отступы у списков */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -11,34 +13,66 @@
   white-space: nowrap; /* Для того чтобы элементы были написаны в 1 строку */
 }
 
-.sidebar > ul > li { /* 1 level */
+.left-sidebar > ul > li { /* 1 level */
   background: #fffa6e;
 }
-.sidebar > ul ul > li { /* 2 level */
+.left-sidebar > ul ul > li { /* 2 level */
   background: #f2ffe8;
 }
 
 /*///////////////////////////////////////*/
-.sidebar > ul > li { /* 1 уровень */
-  /*float: left;*/ /* CHANGED теперь не надо делать меню 1-го уровня в одну линию */
-  border: 1px solid #222;
+@include respond-to(desktop) {
+  .left-sidebar > ul > li { /* 1 уровень */
+    /*float: left;*/ /* CHANGED теперь не надо делать меню 1-го уровня в одну линию */
+    border: 1px solid #222;
+  }
+
+  .left-sidebar > ul li ul { /* Прячем все меню ниже 1 уровня */
+    display: none;
+    position: absolute;
+  }
+
+  /* Если без JS, то раскомментировать */
+  /*.left-sidebar > ul li:hover > ul { /!* Показываем все меню при наведении на родительский li, которые находятся ниже 1 уровня*!/*/
+  /*display: block;*/
+  /*}*/
+
+  .left-sidebar ul li {
+    position: relative; /* Для того чтобы top:0 для меню >=2 уровня выравнивал по li, а не по ul */
+  }
+
+  .left-sidebar > ul ul { /* Начиная с 2-го уровня размещать списки справа от родительского li */
+    top: 0;
+    left: 100%;
+  }
 }
 
-.sidebar > ul li ul { /* Прячем все меню ниже 1 уровня */
-  display: none;
-  position: absolute;
-}
+$sidebar-TimeTransition: 0.7s;
+@include respond-to(mobile) {
+  .left-sidebar {
+    position: fixed;
+    left: -60%;
+    width: 60%;
+    height: 100%;
+    z-index: 1;
+    transition: left $sidebar-TimeTransition ease-out 0.1s;
 
-/* Если без JS, то раскомментировать */
-/*.sidebar > ul li:hover > ul { /!* Показываем все меню при наведении на родительский li, которые находятся ниже 1 уровня*!/*/
-/*display: block;*/
-/*}*/
+    &.active {
+      left: 0;
+    }
 
-.sidebar ul li {
-  position: relative; /* Для того чтобы top:0 для меню >=2 уровня выравнивал по li, а не по ul */
-}
+    a {
+      display: block;
+    }
 
-.sidebar > ul ul { /* Начиная с 2-го уровня размещать списки справа от родительского li */
-  top: 0;
-  left: 100%;
+    > ul li ul {
+      display: none;
+      position: static;
+    }
+
+    > ul ul {
+      top: 100%;
+      left: 0;
+    }
+  }
 }

@@ -1,0 +1,50 @@
+@import "variables";
+@import "compass/reset";
+
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 968px;
+
+  position: relative; /* для ширины */
+}
+
+header {
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #57a539;
+  padding: 10px;
+  height: $header-height;
+}
+
+body {
+  padding-top: $header-height;
+  font-size: 16px;
+}
+
+.content {
+  @include respond-to(desktop) {
+    width: 70%;
+    margin-left: 30%;
+  }
+  @include respond-to(mobile) {
+    margin-left: $left-swipe-area-width;
+  }
+}
+
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+

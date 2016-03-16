@@ -1,0 +1,41 @@
+@import "variables";
+
+
+
+
+@include respond-to(desktop) {
+  .menu-top__button {
+    display: none;
+  }
+
+  .menu-top > ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .menu-top li {
+    float: left;
+    padding: 5px;
+    border: 1px black solid;
+  }
+}
+
+@include respond-to(mobile) {
+  .menu-top__button {
+    display: block;
+    float: right;
+    padding: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin: -10px 0;
+  }
+
+  .menu-top > ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+}

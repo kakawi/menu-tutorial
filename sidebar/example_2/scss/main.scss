@@ -1,3 +1,4 @@
+@import "variables";
 .wrapper {
   margin: 0 auto;
   width: 600px;
@@ -5,10 +6,14 @@
   position: relative; /* для ширины */
 }
 
-.content {
-  width: 70%;
-  margin-left: 30%;
+@include respond-to(desktop) {
+  .content {
+    width: 70%;
+    margin-left: 30%;
+  }
 }
+
+
 
 .clearfix:before,
 .clearfix:after {

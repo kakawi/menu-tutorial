@@ -1,0 +1,236 @@
+@charset "UTF-8";
+/* line 3, ../scss/sidebar.scss */
+.left-sidebar > ul > li {
+  /* 1 level */
+  background: #fffa6e;
+}
+
+/* line 6, ../scss/sidebar.scss */
+.left-sidebar > ul ul > li {
+  /* 2 level */
+  background: #f2ffe8;
+}
+
+/* line 11, ../scss/sidebar.scss */
+.left-sidebar ul {
+  /* сбрасываем поля и отступы у списков */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  /* Для того чтобы элементы были написаны в 1 строку */
+}
+
+@media only screen and (min-width: 1001px) {
+  /* line 22, ../scss/sidebar.scss */
+  .left-sidebar {
+    width: 30%;
+    position: absolute;
+  }
+  /* line 26, ../scss/sidebar.scss */
+  .left-sidebar > ul > li {
+    /* 1 уровень */
+    border: 1px solid #222;
+  }
+  /* line 31, ../scss/sidebar.scss */
+  .left-sidebar > ul ul {
+    /* Начиная с 2-го уровня размещать списки справа от родительского li */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+  /* line 39, ../scss/sidebar.scss */
+  .left-sidebar ul li {
+    position: relative;
+    /* Для того чтобы top:0 для меню >=2 уровня выравнивал по li, а не по ul */
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 46, ../scss/sidebar.scss */
+  .wrapper {
+    width: 100%;
+  }
+
+  /* line 49, ../scss/sidebar.scss */
+  .moved-container {
+    left: 0;
+    position: relative;
+  }
+  /* line 53, ../scss/sidebar.scss */
+  .moved-container.active {
+    left: 20%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 63, ../scss/sidebar.scss */
+  .left-swipe-area {
+    position: fixed;
+    width: 15%;
+    height: 100%;
+    z-index: 2;
+    background: #f3f3f3;
+  }
+  /* line 71, ../scss/sidebar.scss */
+  .left-swipe-area .ratio-inner {
+    position: relative;
+    height: 0;
+    border: none;
+    padding-top: 50%;
+    background: #DF314D;
+    margin: 5px auto 0 auto;
+    width: 60%;
+    border-radius: 3px;
+  }
+  /* line 82, ../scss/sidebar.scss */
+  .left-swipe-area #sidebar-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  /* line 98, ../scss/sidebar.scss */
+  .left-swipe-area #sidebar-toggle .bar {
+    display: block;
+    width: 80%;
+    margin: 0 auto 20% auto;
+    height: 8%;
+    background-color: #fff;
+    border-radius: 2px;
+  }
+  /* line 106, ../scss/sidebar.scss */
+  .left-swipe-area #sidebar-toggle .bar:first-child {
+    margin-top: 12%;
+  }
+
+  /* line 114, ../scss/sidebar.scss */
+  .left-sidebar {
+    position: fixed;
+    /* Смещаем на ширину swipe-area
+    Теперь анимация начинается ровно от правого края swipe-area
+    (благодаря left: -(100% + $extra-width-li))
+    */
+    left: 15%;
+    /* Меню должно быть под swipe-area*/
+    z-index: 1;
+    /* Отступ от кнопки в swipe-area */
+    margin-top: 10%;
+    /**
+    Если делать через
+    display: none -> display: block, то не отрабатывает CSS-анимация
+    А проблема в том, что на месте, где должно находится left-sidebar
+    нельзя нажать (выделить), т.е. нужно так спрятать элемент, чтобы он
+    не только был визуально невидим (left, margin-left), но и не кликабелен (visibility:hidden)
+    */
+    visibility: hidden;
+    /* этот класс обязательно завязан на setTimeout, чтобы сначала отработала
+    анимация, а потом исчезло меню */
+  }
+  /* line 136, ../scss/sidebar.scss */
+  .left-sidebar.active {
+    visibility: visible;
+  }
+  /* line 140, ../scss/sidebar.scss */
+  .left-sidebar > ul > li {
+    /* 1 уровень */
+    position: relative;
+    width: 160%;
+    left: -160%;
+    transition: left 0.5s ease-out;
+  }
+  /* line 150, ../scss/sidebar.scss */
+  .left-sidebar > ul > li.is-expanded {
+    left: 0;
+  }
+  /* line 158, ../scss/sidebar.scss */
+  .left-sidebar > ul > li:nth-child(1) {
+    transition-delay: 0.63s;
+  }
+  /* line 162, ../scss/sidebar.scss */
+  .left-sidebar > ul > li.is-expanded:nth-child(1) {
+    transition-delay: 0s;
+  }
+  /* line 158, ../scss/sidebar.scss */
+  .left-sidebar > ul > li:nth-child(2) {
+    transition-delay: 0.56s;
+  }
+  /* line 162, ../scss/sidebar.scss */
+  .left-sidebar > ul > li.is-expanded:nth-child(2) {
+    transition-delay: 0.07s;
+  }
+  /* line 158, ../scss/sidebar.scss */
+  .left-sidebar > ul > li:nth-child(3) {
+    transition-delay: 0.49s;
+  }
+  /* line 162, ../scss/sidebar.scss */
+  .left-sidebar > ul > li.is-expanded:nth-child(3) {
+    transition-delay: 0.14s;
+  }
+  /* line 158, ../scss/sidebar.scss */
+  .left-sidebar > ul > li:nth-child(4) {
+    transition-delay: 0.42s;
+  }
+  /* line 162, ../scss/sidebar.scss */
+  .left-sidebar > ul > li.is-expanded:nth-child(4) {
+    transition-delay: 0.21s;
+  }
+  /* line 158, ../scss/sidebar.scss */
+  .left-sidebar > ul > li:nth-child(5) {
+    transition-delay: 0.35s;
+  }
+  /* line 162, ../scss/sidebar.scss */
+  .left-sidebar > ul > li.is-expanded:nth-child(5) {
+    transition-delay: 0.28s;
+  }
+  /* line 158, ../scss/sidebar.scss */
+  .left-sidebar > ul > li:nth-child(6) {
+    transition-delay: 0.28s;
+  }
+  /* line 162, ../scss/sidebar.scss */
+  .left-sidebar > ul > li.is-expanded:nth-child(6) {
+    transition-delay: 0.35s;
+  }
+  /* line 158, ../scss/sidebar.scss */
+  .left-sidebar > ul > li:nth-child(7) {
+    transition-delay: 0.21s;
+  }
+  /* line 162, ../scss/sidebar.scss */
+  .left-sidebar > ul > li.is-expanded:nth-child(7) {
+    transition-delay: 0.42s;
+  }
+  /* line 158, ../scss/sidebar.scss */
+  .left-sidebar > ul > li:nth-child(8) {
+    transition-delay: 0.14s;
+  }
+  /* line 162, ../scss/sidebar.scss */
+  .left-sidebar > ul > li.is-expanded:nth-child(8) {
+    transition-delay: 0.49s;
+  }
+  /* line 158, ../scss/sidebar.scss */
+  .left-sidebar > ul > li:nth-child(9) {
+    transition-delay: 0.07s;
+  }
+  /* line 162, ../scss/sidebar.scss */
+  .left-sidebar > ul > li.is-expanded:nth-child(9) {
+    transition-delay: 0.56s;
+  }
+  /* line 158, ../scss/sidebar.scss */
+  .left-sidebar > ul > li:nth-child(10) {
+    transition-delay: 0s;
+  }
+  /* line 162, ../scss/sidebar.scss */
+  .left-sidebar > ul > li.is-expanded:nth-child(10) {
+    transition-delay: 0.63s;
+  }
+  /* line 169, ../scss/sidebar.scss */
+  .left-sidebar > ul ul {
+    /* Начиная с 2-го уровня размещать списки справа от родительского li */
+    display: none;
+    position: static;
+  }
+  /* line 174, ../scss/sidebar.scss */
+  .left-sidebar a {
+    display: block;
+  }
+}
