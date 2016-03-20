@@ -1,0 +1,47 @@
+$small: 1000px;
+$width__left-swipe-area: 15%;
+$height__header: 50px;
+$height__footer: 50px;
+$extra-width-li: 40%;
+
+$width__sidebar_desktop: 29%;
+
+$z-index__header: 4;
+$z-index_left-sidebar: 1;
+$z-index_left-swipe-area: 2;
+$z-index__footer: 3;
+
+$colours:
+(
+  header__background: #FFAD33,
+  header__li_hover__background: #FFEBCC,
+  swipe-area__background: #FFF9F0,
+  sidebar-toggle_background: #FF9800,
+  sidebar-li__first-level__mobile__background: #FFD699,
+  sidebar__background_desktop: rgba(255, 235, 204, 0.67),
+);
+
+@function get-colour($colour) {
+
+  @if map-has-key($colours, $colour) {
+    $colour: map-get($colours, $colour);
+  } @else {
+    @if type-of($colour) != colour {
+      @error "Colour name: `#{$colour}` not found.";
+    }
+  }
+
+  @return $colour;
+}
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $small) { @content; }
+  }
+    //@else if $media == medium-screens {
+    //  @media only screen and (min-width: $small + 1) and (max-width: $large - 1) { @content; }
+    //}
+  @else if $media == desktop {
+    @media only screen and (min-width: $small + 1) { @content; }
+  }
+}

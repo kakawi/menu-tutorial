@@ -1,0 +1,118 @@
+@import "variables";
+@import "fonts";
+
+header {
+  z-index: $z-index__header;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: get_colour(header__background);
+  padding: 10px;
+  height: $height__header;
+  box-shadow: 0 1px 14px #995C00;
+
+  a {
+    text-decoration: none;
+    font-family: $headerFont;
+  }
+
+  .logo {
+    display: table;
+    float: left;
+    height: 100%;
+
+    a {
+      border: 1px solid black;
+      height: 100%;
+      display: table-cell;
+      vertical-align: middle;
+      img {
+        width: 100px;
+      }
+    }
+  }
+
+  .wrapper {
+    height: 100%;
+    .menu-top {
+      height: 100%;
+    }
+  }
+}
+
+@include respond-to(desktop) {
+  .menu-top__button {
+    display: none;
+  }
+
+  .menu-top {
+    height: 100%;
+  }
+
+  .menu-top > ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+  }
+
+  .menu-top li {
+    height: 100%;
+    display: table; //чтобы выровнять <a> по вертикали
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background:  get-colour(header__li_hover__background);
+    }
+
+    a {
+      padding: 0 20px;
+      display: table-cell; // чтобы выравнять по вертикали
+      vertical-align: middle; // само выравнивание
+      color: #101010;
+    }
+  }
+
+
+}
+
+@include respond-to(mobile) {
+  .menu-top__button {
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-right: 20px;
+    height: 100%;
+    font-weight: 700;
+    color: #fff;
+    vertical-align: middle;
+  }
+
+  .menu-top > ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    li {
+      background-color: #FFD699;
+      padding: 5px;
+
+      &:hover {
+        background-color: #FFEBCC;
+      }
+
+      a {
+        color: #101010;
+        display: block;
+      }
+    }
+  }
+}

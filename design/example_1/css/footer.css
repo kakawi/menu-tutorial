@@ -1,0 +1,20 @@
+@import url(../fonts/roboto/roboto.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Merriweather&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic);
+/* line 4, ../scss/footer.scss */
+footer {
+  z-index: 3;
+  height: 50px;
+  background: #FFAD33;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 -1px 14px #995C00;
+}
+/* line 13, ../scss/footer.scss */
+footer div {
+  padding: 5px;
+  font-family: "Russo One", sans-serif;
+}

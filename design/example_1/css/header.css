@@ -1,0 +1,126 @@
+@import url(../fonts/roboto/roboto.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Merriweather&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic);
+/* line 4, ../scss/header.scss */
+header {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #FFAD33;
+  padding: 10px;
+  height: 50px;
+  box-shadow: 0 1px 14px #995C00;
+}
+/* line 15, ../scss/header.scss */
+header a {
+  text-decoration: none;
+  font-family: "Russo One", sans-serif;
+}
+/* line 20, ../scss/header.scss */
+header .logo {
+  display: table;
+  float: left;
+  height: 100%;
+}
+/* line 25, ../scss/header.scss */
+header .logo a {
+  border: 1px solid black;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 30, ../scss/header.scss */
+header .logo a img {
+  width: 100px;
+}
+/* line 36, ../scss/header.scss */
+header .wrapper {
+  height: 100%;
+}
+/* line 38, ../scss/header.scss */
+header .wrapper .menu-top {
+  height: 100%;
+}
+
+@media only screen and (min-width: 1001px) {
+  /* line 45, ../scss/header.scss */
+  .menu-top__button {
+    display: none;
+  }
+
+  /* line 49, ../scss/header.scss */
+  .menu-top {
+    height: 100%;
+  }
+
+  /* line 53, ../scss/header.scss */
+  .menu-top > ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+  }
+
+  /* line 64, ../scss/header.scss */
+  .menu-top li {
+    height: 100%;
+    display: table;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  /* line 69, ../scss/header.scss */
+  .menu-top li:hover {
+    background: #FFEBCC;
+  }
+  /* line 73, ../scss/header.scss */
+  .menu-top li a {
+    padding: 0 20px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #101010;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 85, ../scss/header.scss */
+  .menu-top__button {
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-right: 20px;
+    height: 100%;
+    font-weight: 700;
+    color: #fff;
+    vertical-align: middle;
+  }
+
+  /* line 96, ../scss/header.scss */
+  .menu-top > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  /* line 104, ../scss/header.scss */
+  .menu-top > ul li {
+    background-color: #FFD699;
+    padding: 5px;
+  }
+  /* line 108, ../scss/header.scss */
+  .menu-top > ul li:hover {
+    background-color: #FFEBCC;
+  }
+  /* line 112, ../scss/header.scss */
+  .menu-top > ul li a {
+    color: #101010;
+    display: block;
+  }
+}

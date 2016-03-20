@@ -1,0 +1,50 @@
+@import url(../fonts/roboto/roboto.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Merriweather&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic);
+@media only screen and (min-width: 1001px) {
+  /* line 5, ../scss/content.scss */
+  .hlebon-content {
+    width: 70%;
+    margin-left: 30%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 5, ../scss/content.scss */
+  .hlebon-content {
+    margin-left: 15%;
+  }
+}
+
+/* line 15, ../scss/content.scss */
+.hlebon-content {
+  height: 100%;
+  font-family: "Roboto Slab";
+  background: #FBFBFB;
+}
+@media only screen and (min-width: 1001px) {
+  /* line 15, ../scss/content.scss */
+  .hlebon-content {
+    padding: 10px;
+    box-shadow: -1px 3px 25px black;
+    -moz-border-radius-topright: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 55px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 15, ../scss/content.scss */
+  .hlebon-content {
+    padding: 5px;
+    margin-bottom: 50px;
+  }
+}
+/* line 34, ../scss/content.scss */
+.hlebon-content iframe {
+  max-width: 100%;
+}

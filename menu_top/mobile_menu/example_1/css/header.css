@@ -1,40 +1,86 @@
+@import url(../fonts/roboto/roboto.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Merriweather&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic);
+/* line 4, ../scss/header.scss */
+header {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #FFAD33;
+  padding: 10px;
+  height: 50px;
+  box-shadow: 0 1px 14px #995C00;
+}
+/* line 15, ../scss/header.scss */
+header a {
+  text-decoration: none;
+  font-family: "Russo One", sans-serif;
+}
+
 @media only screen and (min-width: 1001px) {
-  /* line 7, ../scss/header.scss */
+  /* line 22, ../scss/header.scss */
   .menu-top__button {
     display: none;
   }
 
-  /* line 11, ../scss/header.scss */
+  /* line 26, ../scss/header.scss */
   .menu-top > ul {
     padding: 0;
     margin: 0;
     list-style: none;
-  }
-
-  /* line 17, ../scss/header.scss */
-  .menu-top li {
-    float: left;
-    padding: 5px;
-    border: 1px black solid;
-  }
-}
-@media only screen and (max-width: 1000px) {
-  /* line 25, ../scss/header.scss */
-  .menu-top__button {
-    display: block;
-    float: right;
-    padding: 15px;
-    font-weight: 700;
-    color: #fff;
-    margin: -10px 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   /* line 34, ../scss/header.scss */
+  .menu-top li {
+    padding: 5px;
+  }
+
+  /* line 38, ../scss/header.scss */
+  a {
+    color: #101010;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 44, ../scss/header.scss */
+  .menu-top__button {
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-right: 20px;
+    height: 50px;
+    font-weight: 700;
+    color: #fff;
+    vertical-align: middle;
+  }
+
+  /* line 55, ../scss/header.scss */
   .menu-top > ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
+    width: 100%;
+  }
+  /* line 63, ../scss/header.scss */
+  .menu-top > ul li {
+    background-color: #FFD699;
+    padding: 5px;
+    border-bottom: 1px solid #B36B00;
+  }
+  /* line 69, ../scss/header.scss */
+  .menu-top > ul li a {
+    color: #101010;
+    display: block;
+  }
+  /* line 74, ../scss/header.scss */
+  .menu-top > ul li:hover {
+    background-color: #FFEBCC;
   }
 }

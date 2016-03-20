@@ -1,0 +1,60 @@
+@import "variables";
+@import "compass/reset";
+@import "fonts";
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper-boarder {
+  margin: 0 auto;
+  max-width: 968px;
+
+  //position: relative; /* для ширины */
+}
+
+.wrapper-header {
+  height: 100%;
+  position: relative;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  .wrapper-all {
+    min-height: 100%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  font-size: 1rem;
+  @include respond-to(desktop) {
+    padding-top: ($height__header + 5px);
+  }
+  @include respond-to(mobile) {
+    padding-top: $height__header;
+  }
+  background: url("../img/background.png");
+}
+
+
+
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+

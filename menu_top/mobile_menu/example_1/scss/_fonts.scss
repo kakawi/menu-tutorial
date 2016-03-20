@@ -1,0 +1,32 @@
+//@import "http://webfonts.ru/import/clearsans.css";
+//@import "http://webfonts.ru/import/lato.css";
+
+@import "../fonts/roboto/roboto.css";
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic);
+$roboto-slab: 'Roboto Slab';
+@import url(https://fonts.googleapis.com/css?family=Merriweather&subset=latin,cyrillic);
+$merriweather: 'Merriweather', serif;
+@import url(https://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic);
+$russo-one: 'Russo One', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic);
+$pt-serif: 'PT Serif', serif;
+
+
+$headerFont: $russo-one;
+//$headerFont : 'Clear Sans';
+//$headerFont : 'Lato';
+//$headerFont : 'Kelson Sans';
+
+
+//@import "../fonts/kelson/kelson.css";
+//$breadcrumbsFont: 'Kelson Sans';
+//@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+//$sidebarFont: 'Kelson Sans';
+
+
+
+//@import "http://webfonts.ru/import/robotoslab.css";
+//$contentFont: 'Roboto Slab';
+
+
+$contentFont: 'Roboto';

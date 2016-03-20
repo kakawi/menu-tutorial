@@ -1,0 +1,39 @@
+@import "fonts";
+@import "variables";
+@import "compass/css3/border-radius";
+
+.hlebon-content {
+  @include respond-to(desktop) {
+    width: 70%;
+    margin-left: 30%;
+  }
+  @include respond-to(mobile) {
+    margin-left: $width__left-swipe-area;
+  }
+}
+
+.hlebon-content {
+  height: 100%;
+  font-family: $roboto-slab;
+  background: #FBFBFB;
+
+
+  @include respond-to(desktop) {
+    padding: 10px;
+
+    box-shadow: -1px 3px 25px black;
+    @include border-right-radius(10px);
+    margin-bottom: $height__footer + 5px;
+  }
+
+  @include respond-to(mobile) {
+    padding: 5px;
+    margin-bottom: $height__footer;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+
+}

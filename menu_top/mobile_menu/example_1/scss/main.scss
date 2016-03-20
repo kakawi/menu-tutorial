@@ -1,5 +1,6 @@
 @import "variables";
 @import "compass/reset";
+@import "fonts";
 
 * {
   box-sizing: border-box;
@@ -11,20 +12,11 @@
   position: relative; /* для ширины */
 }
 
-header {
-  z-index: 11;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #57a539;
-  padding: 10px;
-  height: $header-height;
-}
 
 body {
-  padding-top: $header-height;
-  font-size: 16px;
+  font-size: 1rem;
+  padding-top: ($height_header + 5px);
+  //font-size: 16px;
 }
 
 .content {
